@@ -27,6 +27,8 @@ Color Pallette
 font-size: 16px;
 /* Global Transition */
 --transition: all 0.3s ease;
+
+ --header-height: 70px; /* fallback for mobile */
 }
 
 /* 
@@ -171,7 +173,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Only show on mobile */
-@media screen and (min-width: 426px){
+@media screen and (min-width: 425px){
   .mobile-sidebar,
   .sidebar-overlay{
     display: none;
@@ -192,6 +194,7 @@ h1, h2, h3, h4, h5, h6{
     background-size: cover;     
     background-position: center;
     background-repeat: no-repeat;
+    filter: brightness(0.5);
 }
 .hero-section{
     height: 100vh;
