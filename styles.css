@@ -106,6 +106,77 @@ h1, h2, h3, h4, h5, h6{
         cursor: pointer;
     }
 }
+.mobile-sidebar{
+  position: fixed;
+  top: var(--header-height);              /* starts below header */
+  right: 0;
+  width: 80%;
+  max-width: 320px;
+  height: calc(100vh - var(--header-height));
+  background: #333;
+  z-index: 2000;
+
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Active state (JS toggles this) */
+.mobile-sidebar.active{
+  transform: translateX(0);
+}
+
+.sidebar-nav{
+  padding: 24px 20px;
+}
+
+.sidebar-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-list a{
+  text-decoration: none;
+  color: #f4f4f4;
+  font-family: var(--ff-primary);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar-list a:hover{
+  color: var(--clr-primary);
+}
+
+/* Overlay should also start below header (so header stays clickable) */
+.sidebar-overlay{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  background: rgba(0,0,0,0.6);
+  z-index: 1500;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Only show on mobile */
+@media screen and (min-width: 426px){
+  .mobile-sidebar,
+  .sidebar-overlay{
+    display: none;
+  }
+}
 
 /* Hero Section */
 .hero-section::before{
@@ -220,6 +291,7 @@ h1, h2, h3, h4, h5, h6{
     position: relative;
     width: 80%;
 }
+
 .info-parent-container > div{
     grid-area: 1 / 1;
 }
@@ -254,6 +326,14 @@ h1, h2, h3, h4, h5, h6{
     font-size: clamp(21px, 4vw, 28px);
     z-index: 10;
 }
+.information-container:nth-child(2) svg{
+    position: absolute;
+    bottom: 40%;
+    right: 20px;
+    width: clamp(40px, 8vw, 60px);
+    height: auto;
+    z-index: 10;
+}
 
 .information-container:nth-child(1){
     background: black;
@@ -274,15 +354,22 @@ h1, h2, h3, h4, h5, h6{
     text-align: center;
     gap: 10px;
 } */
+.phone-services{
+    display: none;
+    position: relative;
+}
 @media screen and (max-width: 425px){
     .info-parent-container{
+        display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .info-parent-container > div{
         width: 100%;
+        grid-area: auto;
     }
-    .information-container:nth-child(2){
-        grid-template-columns: 1fr;
+    .information-container{
+        display: none;
     }
     .container-title{
         align-items: center;
@@ -291,6 +378,61 @@ h1, h2, h3, h4, h5, h6{
     .header-bold{
         width: 10%;
     }
+    .phone-services{
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+    }
+}
+/* 
+==================
+PHone section
+==================
+*/
+
+.phone-services img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.phone-services h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4f4f4;
+    font-size: clamp(21px, 4vw, 28px);
+    z-index: 10;
+}
+.phone-services p{
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4f4f4;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(14px, 4vw, 22px);
+    z-index: 10;
+}
+.phone-services button{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f4f4f4;
+    background: var(--clr-secondary);
+    border: none;
+    text-align: center;
+    font-size: clamp(12px, 4vw, 14px);
+    padding: 0.5em 1em;
+    z-index: 10;
 }
 
 /* COntact Stuff */

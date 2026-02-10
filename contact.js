@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header');
-  const target = document.querySelector('.body-section'); // first section after hero
+  const target = document.querySelector('.contact-details-strip'); // body-container contact-details-strip
 
   if (!header || !target) return;
 
@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const headerBottom = header.getBoundingClientRect().bottom;
     const targetTop = target.getBoundingClientRect().top;
 
+    // header touches/overlaps the strip
     if (headerBottom >= targetTop) {
       header.classList.add('scrolled');
     } else {

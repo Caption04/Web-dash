@@ -13,22 +13,42 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <a href="index.html" class="logo-link">
-            <img src="logo.png" alt="Logo" class="logo-image" />
-        </a>
-        <button class="menu-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="width:30px;height:30px;display:block;"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#90ab8b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-        </button>
-        <nav class="nav-list-container">
-            <ul class="nav-list">
-                <li class="nav-list-item"><a href="#" class="nav-list-link">Home</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-list-link">About</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-list-link">Projects</a></li>
-                <li class="nav-list-item"><a href="#" class="nav-list-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- SAME HEADER -->
+  <header class="header">
+    <a href="index.html" class="logo-link">
+      <img src="logo.png" alt="Logo" class="logo-image" />
+    </a>
+
+    <button class="menu-icon" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="width:30px;height:30px;display:block;">
+        <path d="M4 6H20M4 12H20M4 18H20" stroke="#90ab8b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
+    <nav class="nav-list-container">
+      <ul class="nav-list">
+        <li class="nav-list-item"><a href="index.html" class="nav-list-link">Home</a></li>
+        <li class="nav-list-item"><a href="about.html" class="nav-list-link">About</a></li>
+        <li class="nav-list-item"><a href="projects.html" class="nav-list-link">Projects</a></li>
+        <li class="nav-list-item"><a href="contact.html" class="nav-list-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Mobile Sidebar -->
+<aside class="mobile-sidebar" aria-hidden="true">
+  <nav class="sidebar-nav">
+    <ul class="sidebar-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- Overlay -->
+<div class="sidebar-overlay"></div>
+
     <section class="hero-section"></section>
     <section class="body-section">
         <!-- Contains Title -->
@@ -93,6 +113,7 @@
                 <!-- Services -->
                 <div class="information-container">
                     <h2 class="ic-header">WATERPROOFING</h2>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 4V20M12 20L8 16M12 20L16 16" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     <img src="info(2).jpg" alt="Stuff MAyne" class="information-image"/>
                     <!-- Start -->
                     <!-- <div class="service">
@@ -155,6 +176,22 @@
                     </div> -->
                     <!-- End -->
                 </div>
+                <div class="phone-services">
+                    <img src="services-construction.jpg" alt="" class="services-picture">
+                    <h2 class="services-header">CONSTRUCTION</h2>
+                    <button class="phone-services-btn">Learn More</button>
+                    <p class="phone-services-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <div class="phone-services">
+                    <img src="services-waterpoofing.jpg" alt="" class="services-picture">
+                    <h2 class="services-header">WATERPROOFING</h2>
+                    <button class="phone-services-btn">Learn More</button>
+                    <p class="phone-services-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
             </div>
         </div>
         <!-- Contact Section -->
@@ -201,7 +238,7 @@
         <!-- About Section -->
         <div class="body-container">
             <div class="body-bottom-info">
-                <img src="logo.png" alt="logo" class="footer-logo"/>
+                <img src="plain-logo.png" alt="logo" class="footer-logo"/>
             </div>
             <div class="body-bottom-info">
                 <h3 class="footer-title">About Us</h3>

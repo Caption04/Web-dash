@@ -1,25 +1,28 @@
 window.addEventListener('DOMContentLoaded', () => {
+  /* =========================
+     HEADER SCROLL BEHAVIOUR
+  ========================= */
   const header = document.querySelector('.header');
-  const target = document.querySelector('.body-section'); // first section after hero
+  const target = document.querySelector('.projects-section');
 
-  if (!header || !target) return;
+  if (header && target) {
+    const updateHeader = () => {
+      const headerBottom = header.getBoundingClientRect().bottom;
+      const targetTop = target.getBoundingClientRect().top;
 
-  const updateHeader = () => {
-    const headerBottom = header.getBoundingClientRect().bottom;
-    const targetTop = target.getBoundingClientRect().top;
+      if (headerBottom >= targetTop) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
 
-    if (headerBottom >= targetTop) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  };
+    updateHeader();
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    window.addEventListener('resize', updateHeader);
+  }
 
-  updateHeader();
-  window.addEventListener('scroll', updateHeader, { passive: true });
-  window.addEventListener('resize', updateHeader);
-
-    /* =========================
+  /* =========================
      MOBILE SIDEBAR TOGGLE
   ========================= */
   const menuBtn = document.querySelector('.menu-icon');

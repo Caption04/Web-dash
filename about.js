@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header');
-  const target = document.querySelector('.body-section'); // first section after hero
+  const target = document.querySelector('.trust-strip'); // first section after hero
 
   if (!header || !target) return;
 
