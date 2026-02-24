@@ -520,6 +520,15 @@ PHone section
     justify-content: flex-end;
     padding-right: 150px;
 }
+.about-us-btn{
+    width: fit-content;
+    padding: 0.5em 1em;
+    background: var(--clr-primary);
+    border: none;
+    color: #f4f4f4;
+    text-decoration: none;
+    cursor: pointer;
+}
 @media screen and (max-width: 425px){
     .body-container:nth-of-type(6){
         flex-direction: column;

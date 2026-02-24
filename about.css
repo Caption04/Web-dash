@@ -462,6 +462,99 @@ h1, h2, h3, h4, h5, h6{
   .proof-grid{ grid-template-columns: 1fr; }
 }
 
+/* Link Styling for Proof Card */
+.service-link {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--clr-secondary);
+  text-decoration: none;
+}
+
+.service-link:hover {
+  color: var(--clr-primary);
+}
+
+/* Management Section */
+.management-grid {
+  width: min(1000px, 92%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.management-card {
+  background: #f4f4f4;
+  border-radius: 12px;
+  overflow: hidden; /* Ensures image doesn't bleed out of corners */
+  transition: var(--transition);
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.management-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.management-img-container {
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  background: #ddd; /* Placeholder color */
+}
+
+.management-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps aspect ratio while filling space */
+  display: block;
+}
+
+.management-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.management-name {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.management-role {
+  font-size: 14px;
+  color: var(--clr-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.management-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Tablet view */
+@media screen and (max-width: 900px) {
+  .management-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 500px) {
+  .management-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .management-img-container {
+    height: 300px;
+  }
+}
+
 /* CTA */
 .cta-section{
   padding: 70px 10px;
