@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
 /* 
 ===================
@@ -15,7 +14,7 @@ Color Pallette
 --gradient-var1: linear-gradient(180deg, #90ab8b, #3b4953);
 
 /*Fonts */
---ff-primary: "Poppins", sans-serif;
+--ff-primary: "Montserrat", sans-serif;
 --ff-secondary: "Roboto", sans-serif;
 /* font size */
 font-size: 16px;
