@@ -240,6 +240,13 @@ h1, h2, h3, h4, h5, h6{
   justify-content: center;
 }
 
+.contact-detail a{
+  color: #f4f4f4;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
 .contact-icon{
   padding: 12px;
   border-radius: 100%;
@@ -399,6 +406,12 @@ h1, h2, h3, h4, h5, h6{
   background: #333;
   color: #f4f4f4;
   padding-top: 40px;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .footer-container {

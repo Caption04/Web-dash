@@ -530,6 +530,14 @@ PHone section
     border-radius: 100%;
     background: var(--clr-primary);
 }
+
+.contact-detail p a{
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
 @media screen and (max-width: 425px){
     .body-container:nth-of-type(4){
         flex-direction: column;
@@ -604,7 +612,11 @@ PHone section
   color: #f4f4f4;
   padding-top: 40px;
 }
-
+.footer-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
 .footer-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
