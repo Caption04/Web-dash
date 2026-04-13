@@ -71,7 +71,7 @@ body{
 .nav-list li a:hover{ color: var(--clr-primary); }
 .menu-icon{ display: none; }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .logo-image{ width: 100px; }
   .nav-list{ display: none; }
   .menu-icon{

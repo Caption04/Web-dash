@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6{
 .nav-list li a:hover{ color: var(--clr-primary); }
 .menu-icon{ display: none; }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .logo-image{ width: 100px; }
   .nav-list{ display: none; }
   .menu-icon{
@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6{
   border: none;
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .container-title{ align-items: center; }
   .header-bold{ width: 10%; }
 }
@@ -337,7 +337,7 @@ h1, h2, h3, h4, h5, h6{
   font-size: 14px;
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .two-col{ grid-template-columns: 1fr; }
 }
 
@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6{
 @media screen and (max-width: 900px){
   .service-grid{ grid-template-columns: repeat(2, 1fr); }
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .service-grid{ grid-template-columns: 1fr; }
 }
 
@@ -422,7 +422,7 @@ h1, h2, h3, h4, h5, h6{
 @media screen and (max-width: 900px){
   .steps{ grid-template-columns: repeat(2, 1fr); }
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .steps{ grid-template-columns: 1fr; }
 }
 
@@ -629,7 +629,7 @@ h1, h2, h3, h4, h5, h6{
   opacity: 0.95;
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
   .contact-details-strip{
     flex-direction: column;
     gap: 40px;

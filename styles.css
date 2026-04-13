@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Only show on mobile */
-@media screen and (min-width: 425px){
+@media screen and (min-width: 768px){
   .mobile-sidebar,
   .sidebar-overlay{
     display: none;
