@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6{
     display: none;
 }
 /* HEADER RESPONSIVENESS */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .logo-image{
         width: 100px;
     }
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6{
     text-align: center;
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
     .body-container:nth-of-type(2){
         flex-direction: column;
     }
@@ -437,7 +437,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Mobile Adjustments */
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
     .container-title {
         align-items: center;
         padding-left: 0;
@@ -538,7 +538,7 @@ PHone section
     transition: color 0.3s ease;
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
     .body-container:nth-of-type(4){
         flex-direction: column;
         gap: 40px;
@@ -584,7 +584,7 @@ PHone section
     text-decoration: none;
     cursor: pointer;
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
     .body-container:nth-of-type(6){
         flex-direction: column;
         gap: 40px;
@@ -674,7 +674,7 @@ PHone section
   overflow: hidden;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .map-embedded{
     height: 100vh;
   }
