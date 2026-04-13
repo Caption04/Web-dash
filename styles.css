@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6{
 /* HEADER RESPONSIVENESS */
 @media screen and (max-width: 768px) {
     .logo-image{
-        width: 100px;
+        width: 150px;
     }
     .nav-list {
         display: none;

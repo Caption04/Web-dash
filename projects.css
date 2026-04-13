@@ -72,7 +72,7 @@ body{
 .menu-icon{ display: none; }
 
 @media screen and (max-width: 768px){
-  .logo-image{ width: 100px; }
+  .logo-image{ width: 150px; }
   .nav-list{ display: none; }
   .menu-icon{
     display: block;
